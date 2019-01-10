@@ -1,3 +1,6 @@
+-- basic function declarations. The last type declaration is the return type. 
+-- The rest are the arguments. Hence why addThree has 4 Integer declarations
+
 chuckNorris :: (Integral a) => a -> String
 chuckNorris 2 = "Not chuck Norris"
 chuckNorris 1 = "chuck norris"
@@ -12,12 +15,14 @@ addThree x y z = x + y + z
 -- third (_, _, c) = c
 
 
-
+-- => is a constraint, this means that anything after if needs to be of that type. e.g. a needs to be of type Num
 addVectors :: (Num a) => (a, a) -> (a, a) -> (a, a)
 addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
 
 addTripleVector :: (Num a) => (a, a, a) -> (a, a, a) -> (a, a, a)
 addTripleVector (x1, y1, z1) (x2, y2, z2) = (x1 + x2, y1 + y2, z1 + z2)
+
+-- This is similar to an if statement 
 
 bmiTell :: (RealFloat a) => a -> a -> String  
 bmiTell weight height  
