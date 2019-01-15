@@ -21,4 +21,7 @@ nAnd True False = True
 nAnd True True = True
 nAnd False False = True
 
-
+-- 3.5 Give line-by-line calculations of
+--     nAnd True True
+--     nAnd True False
+-- for each of your definitions of nAnd in the previous exercise 
