@@ -18,7 +18,6 @@ exOr False x = x
 nAnd :: Bool -> Bool -> Bool
 nAnd True True = False
 nAnd True False = True
-nAnd True True = True
 nAnd False False = True
 
 -- 3.5 Give line-by-line calculations of
