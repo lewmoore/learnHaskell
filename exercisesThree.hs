@@ -31,5 +31,5 @@ nAnd2 x y = not (x && y)
 -- for each of your definitions of nAnd in the previous exercise 
 
 -- 3.6 Explain the effect of the function defined here:
-mystery :: Int -> Int -> Int -> Bool
-mystery m n p = not ((m==n) && (n==p)) 
+mystery :: Int -> Int -> Int -> Bool -- Takes 3 Int args and returns a Bool
+mystery m n p = not ((m==n) && (n==p)) -- checks if m and n are equal, and if n and p are equal. Returns false if they are. Returns True if numbers are different
