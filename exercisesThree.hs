@@ -20,6 +20,9 @@ nAnd True True = False
 nAnd True False = True
 nAnd False False = True
 
+nAnd2 :: Bool -> Bool -> Bool
+nAnd2 x y = not (x && y)
+
 -- 3.5 Give line-by-line calculations of
 --     nAnd True True
 --     nAnd True False
