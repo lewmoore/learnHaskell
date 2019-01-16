@@ -32,4 +32,34 @@ nAnd2 x y = not (x && y)
 
 -- 3.6 Explain the effect of the function defined here:
 mystery :: Int -> Int -> Int -> Bool -- Takes 3 Int args and returns a Bool
-mystery m n p = not ((m==n) && (n==p)) -- checks if m and n are equal, and if n and p are equal. Returns false if they are. Returns True if numbers are different
+mystery m n p = not ((m==n) && (n==p)) -- checks if m and n are equal, and if n and p are equal. Returns false if they are. Returns True if m and n are different
+
+-- 3.7 Define a function
+
+-- so that the result of threeDifferent m n p is True only if all three of the
+-- numbers m, n and p are different.
+-- What is your answer for threeDiff erent 3 4 3? Explain why you get the
+-- answer that you do. 
+
+threeDifferent :: Int -> Int -> Int -> Bool
+threeDifferent m n p = not ((m==n) && (n==p))
+
+-- if this is given 3 4 3, it returns True. It does this because the pattern in given True && True which evaluates to True
+
+threeDifferent2 :: Int -> Int -> Int -> Bool
+threeDifferent2 m n p = not ((m==n) || (n==p) || (m==p))
+
+-- if this is given 3 4 3 it evaluates toi False because its checking True or True or False.
+
+-- 3.8 This question is about the function
+
+-- which returns the value True only if all four of its arguments are equal.
+-- Give a definition of fourEqua1 modelled on the definition of threeEqua1
+-- above. Now give a definition off ourEqual which u.wv the function threeEqual
+-- in its detinition. Compare your two answers. 
+
+fourEqual :: Int -> Int -> Int -> Int -> Bool
+fourEqual a b c d = (a==b) && (b==c) && (c==d) && (a==c) && (a==d)
+
+fourEqual2 :: Int -> Int -> Int -> Int -> Bool
+fourEqual2 a b c d = threeDifferent2 a b c && (a==d)
