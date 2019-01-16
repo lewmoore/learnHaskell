@@ -11,6 +11,8 @@ exOr False x = x
 --3.3 Using literals on the left-hand side we can make the truth table for a function
 --into its Haskell definition. Complete the following definition of exOr in this style.
 
+-- exOr True True = False
+-- exOr True False = True
 
 -- 3.4 Give two different definitions of the nAnd function which returns the result True except when both its arguments are True. Give a
 -- diagram illustrating one of your definitions. 
@@ -27,3 +29,7 @@ nAnd2 x y = not (x && y)
 --     nAnd True True
 --     nAnd True False
 -- for each of your definitions of nAnd in the previous exercise 
+
+-- 3.6 Explain the effect of the function defined here:
+mystery :: Int -> Int -> Int -> Bool
+mystery m n p = not ((m==n) && (n==p)) 
