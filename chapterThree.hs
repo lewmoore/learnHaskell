@@ -42,12 +42,12 @@ mystery m n p = not ((m==n) && (n==p)) -- checks if m and n are equal, and if n 
 -- answer that you do. 
 
 threeDifferent :: Int -> Int -> Int -> Bool
-threeDifferent m n p = not ((m==n) && (n==p))
+threeDifferent m n p = (m/=n) && (n/=p) && (m/=p)
 
 -- if this is given 3 4 3, it returns True. It does this because the pattern in given True && True which evaluates to True
 
 threeDifferent2 :: Int -> Int -> Int -> Bool
-threeDifferent2 m n p = not ((m==n) || (n==p) || (m==p))
+threeDifferent2 m n p = (m/=n) || (n/=p) || (m/=p)
 
 -- if this is given 3 4 3 it evaluates toi False because its checking True or True or False.
 
@@ -59,7 +59,7 @@ threeDifferent2 m n p = not ((m==n) || (n==p) || (m==p))
 -- in its detinition. Compare your two answers. 
 
 fourEqual :: Int -> Int -> Int -> Int -> Bool
-fourEqual a b c d = (a==b) && (b==c) && (c==d) && (a==c) && (a==d)
+fourEqual a b c d = (a==b) && (b==c) && (c==d)
 
 fourEqual2 :: Int -> Int -> Int -> Int -> Bool
 fourEqual2 a b c d = threeDifferent2 a b c && (a==d)
